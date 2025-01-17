@@ -1,0 +1,2 @@
+from .prettifier_app_activatable import PrettifierAppActivatable
+from .prettifier_window_activatable import PrettifierWindowActivatable
