@@ -1,0 +1,35 @@
+ |  close_all_tabs = gi.FunctionInfo(close_all_tabs, bound=None)
+ |
+ |  close_tab = gi.FunctionInfo(close_tab, bound=None)
+ |
+ |  close_tabs = gi.FunctionInfo(close_tabs, bound=None)
+ |
+ |  create_tab = gi.FunctionInfo(create_tab, bound=None)
+ |
+ |  get_active_document = gi.FunctionInfo(get_active_document, bound=None)
+ |
+ |  get_active_tab = gi.FunctionInfo(get_active_tab, bound=None)
+ |
+ |  get_active_view = gi.FunctionInfo(get_active_view, bound=None)
+ |
+ |  get_bottom_panel = gi.FunctionInfo(get_bottom_panel, bound=None)
+ |
+ |  get_documents = gi.FunctionInfo(get_documents, bound=None)
+ |
+ |  get_group = gi.FunctionInfo(get_group, bound=None)
+ |
+ |  get_message_bus = gi.FunctionInfo(get_message_bus, bound=None)
+ |
+ |  get_side_panel = gi.FunctionInfo(get_side_panel, bound=None)
+ |
+ |  get_state = gi.FunctionInfo(get_state, bound=None)
+ |
+ |  get_statusbar = gi.FunctionInfo(get_statusbar, bound=None)
+ |
+ |  get_tab_from_location = gi.FunctionInfo(get_tab_from_location, bound=N...
+ |
+ |  get_unsaved_documents = gi.FunctionInfo(get_unsaved_documents, bound=N...
+ |
+ |  get_views = gi.FunctionInfo(get_views, bound=None)
+ |
+ |  set_active_tab = gi.FunctionInfo(set_active_tab, bound=None)

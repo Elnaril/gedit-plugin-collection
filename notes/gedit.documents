@@ -1,0 +1,583 @@
+class Document(gi.repository.Tepl.Buffer)
+ |  :Constructors:
+ |
+ |  ::
+ |
+ |      Document(**properties)
+ |      new() -> Gedit.Document
+ |
+ |  Method resolution order:
+ |      Document
+ |      gi.repository.Tepl.Buffer
+ |      gi.repository.GtkSource.Buffer
+ |      gi.overrides.Gtk.TextBuffer
+ |      gi.repository.Gtk.TextBuffer
+ |      gi.overrides.GObject.Object
+ |      gi.repository.GObject.Object
+ |      gi._gi.GObject
+ |      builtins.object
+ |
+ |  Methods defined here:
+ |
+ |  do_load = load(...)
+ |
+ |  do_loaded = loaded(...)
+ |
+ |  do_save = save(...)
+ |
+ |  do_saved = saved(...)
+ |
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |
+ |  parent_instance
+ |
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |
+ |  __gsignals__ = {}
+ |
+ |  __gtype__ = <GType GeditDocument (101034969864448)>
+ |
+ |  __info__ = ObjectInfo(Document)
+ |
+ |  get_content_type = gi.FunctionInfo(get_content_type, bound=None)
+ |
+ |  get_file = gi.FunctionInfo(get_file, bound=None)
+ |
+ |  get_metadata = gi.FunctionInfo(get_metadata, bound=None)
+ |
+ |  get_mime_type = gi.FunctionInfo(get_mime_type, bound=None)
+ |
+ |  get_search_context = gi.FunctionInfo(get_search_context, bound=None)
+ |
+ |  new = gi.FunctionInfo(new, bound=<class 'gi.repository.Gedit.Document'...
+ |
+ |  set_language = gi.FunctionInfo(set_language, bound=None)
+ |
+ |  set_search_context = gi.FunctionInfo(set_search_context, bound=None)
+ |
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from gi.repository.Tepl.Buffer:
+ |
+ |  do_tepl_cursor_moved = tepl_cursor_moved(...)
+|  ----------------------------------------------------------------------
+ |  Data and other attributes inherited from gi.repository.Tepl.Buffer:
+ |
+ |  get_full_title = gi.FunctionInfo(get_full_title, bound=None)
+ |
+ |  get_selection_type = gi.FunctionInfo(get_selection_type, bound=None)
+ |
+ |  get_short_title = gi.FunctionInfo(get_short_title, bound=None)
+ |
+ |  get_style_scheme_id = gi.FunctionInfo(get_style_scheme_id, bound=None)
+ |
+ |  is_untouched = gi.FunctionInfo(is_untouched, bound=None)
+ |
+ |  load_metadata_from_metadata_manager = gi.FunctionInfo(load_metadata_fr...
+ |
+ |  provide_style_scheme_id_gsetting = gi.FunctionInfo(provide_style_schem...
+ |
+ |  save_metadata_into_metadata_manager = gi.FunctionInfo(save_metadata_in...
+ |
+ |  set_style_scheme_id = gi.FunctionInfo(set_style_scheme_id, bound=None)
+ |
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from gi.repository.GtkSource.Buffer:
+ |
+ |  do_bracket_matched = bracket_matched(...)
+ |
+ |  do_redo = redo(...)
+ |
+ |  do_undo = undo(...)
+ |
+ |  ----------------------------------------------------------------------
+ |  Data descriptors inherited from gi.repository.GtkSource.Buffer:
+ |
+ |  priv
+ |
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes inherited from gi.repository.GtkSource.Buffer:
+ |
+ |  backward_iter_to_source_mark = gi.FunctionInfo(backward_iter_to_source...
+ |
+ |  begin_not_undoable_action = gi.FunctionInfo(begin_not_undoable_action,...
+ |
+ |  can_redo = gi.FunctionInfo(can_redo, bound=None)
+ |
+ |  can_undo = gi.FunctionInfo(can_undo, bound=None)
+ |
+ |  change_case = gi.FunctionInfo(change_case, bound=None)
+ |
+ |  create_source_mark = gi.FunctionInfo(create_source_mark, bound=None)
+ |
+ |  end_not_undoable_action = gi.FunctionInfo(end_not_undoable_action, bou...
+ |
+ |  ensure_highlight = gi.FunctionInfo(ensure_highlight, bound=None)
+ |
+ |  forward_iter_to_source_mark = gi.FunctionInfo(forward_iter_to_source_m...
+ |
+ |  get_context_classes_at_iter = gi.FunctionInfo(get_context_classes_at_i...
+ |
+ |  get_highlight_matching_brackets = gi.FunctionInfo(get_highlight_matchi...
+ |
+ |  get_highlight_syntax = gi.FunctionInfo(get_highlight_syntax, bound=Non...
+ |
+ |  get_implicit_trailing_newline = gi.FunctionInfo(get_implicit_trailing_...
+ |
+ |  get_language = gi.FunctionInfo(get_language, bound=None)
+ |
+ |  get_max_undo_levels = gi.FunctionInfo(get_max_undo_levels, bound=None)
+ |
+ |  get_source_marks_at_iter = gi.FunctionInfo(get_source_marks_at_iter, b...
+ |
+ |  get_source_marks_at_line = gi.FunctionInfo(get_source_marks_at_line, b...
+ |
+ |  get_style_scheme = gi.FunctionInfo(get_style_scheme, bound=None)
+ |
+ |  get_undo_manager = gi.FunctionInfo(get_undo_manager, bound=None)
+ |
+ |  iter_backward_to_context_class_toggle = gi.FunctionInfo(iter_backward_...
+|
+ |  iter_forward_to_context_class_toggle = gi.FunctionInfo(iter_forward_to...
+ |
+ |  iter_has_context_class = gi.FunctionInfo(iter_has_context_class, bound...
+ |
+ |  join_lines = gi.FunctionInfo(join_lines, bound=None)
+ |
+ |  new_with_language = gi.FunctionInfo(new_with_language, bound=<class 'g...
+ |
+ |  redo = gi.FunctionInfo(redo, bound=None)
+ |
+ |  remove_source_marks = gi.FunctionInfo(remove_source_marks, bound=None)
+ |
+ |  set_highlight_matching_brackets = gi.FunctionInfo(set_highlight_matchi...
+ |
+ |  set_highlight_syntax = gi.FunctionInfo(set_highlight_syntax, bound=Non...
+ |
+ |  set_implicit_trailing_newline = gi.FunctionInfo(set_implicit_trailing_...
+ |
+ |  set_max_undo_levels = gi.FunctionInfo(set_max_undo_levels, bound=None)
+ |
+ |  set_style_scheme = gi.FunctionInfo(set_style_scheme, bound=None)
+ |
+ |  set_undo_manager = gi.FunctionInfo(set_undo_manager, bound=None)
+ |
+ |  sort_lines = gi.FunctionInfo(sort_lines, bound=None)
+ |
+ |  undo = gi.FunctionInfo(undo, bound=None)
+ |
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from gi.overrides.Gtk.TextBuffer:
+ |
+ |  create_mark(self, mark_name, where, left_gravity=False)
+ |
+ |  create_tag(self, tag_name=None, **properties)
+ |      Creates a tag and adds it to the tag table of the TextBuffer.
+ |
+ |      :param str tag_name:
+ |          Name of the new tag, or None
+ |      :param **properties:
+ |          Keyword list of properties and their values
+ |
+ |      This is equivalent to creating a Gtk.TextTag and then adding the
+ |      tag to the buffer's tag table. The returned tag is owned by
+ |      the buffer's tag table.
+ |
+ |      If ``tag_name`` is None, the tag is anonymous.
+ |
+ |      If ``tag_name`` is not None, a tag called ``tag_name`` must not already
+ |      exist in the tag table for this buffer.
+ |
+ |      Properties are passed as a keyword list of names and values (e.g.
+ |      foreground='DodgerBlue', weight=Pango.Weight.BOLD)
+ |
+ |      :returns:
+ |          A new tag.
+ |
+ |  get_selection_bounds(*args, **kwargs) from gi.repository.Gtk.strip_boolean_result.<locals>
+ |      get_selection_bounds(self) -> bool, start:Gtk.TextIter, end:Gtk.TextIter
+ |
+ |  insert(self, iter, text, length=-1)
+ |
+ |  insert_at_cursor(self, text, length=-1)
+ |
+ |  insert_with_tags(self, iter, text, *tags)
+ |
+ |  insert_with_tags_by_name(self, iter, text, *tags)
+ |
+ |  set_text(self, text, length=-1)
+ |
+ |  ----------------------------------------------------------------------
+|  Methods inherited from gi.repository.Gtk.TextBuffer:
+ |
+ |  do_apply_tag = apply_tag(...)
+ |
+ |  do_begin_user_action = begin_user_action(...)
+ |
+ |  do_changed = changed(...)
+ |
+ |  do_delete_range = delete_range(...)
+ |
+ |  do_end_user_action = end_user_action(...)
+ |
+ |  do_insert_child_anchor = insert_child_anchor(...)
+ |
+ |  do_insert_pixbuf = insert_pixbuf(...)
+ |
+ |  do_insert_text = insert_text(...)
+ |
+ |  do_mark_deleted = mark_deleted(...)
+ |
+ |  do_mark_set = mark_set(...)
+ |
+ |  do_modified_changed = modified_changed(...)
+ |
+ |  do_paste_done = paste_done(...)
+ |
+ |  do_remove_tag = remove_tag(...)
+ |
+ |  ----------------------------------------------------------------------
+|  Data and other attributes inherited from gi.repository.Gtk.TextBuffer:
+ |
+ |  add_mark = gi.FunctionInfo(add_mark, bound=None)
+ |
+ |  add_selection_clipboard = gi.FunctionInfo(add_selection_clipboard, bou...
+ |
+ |  apply_tag = gi.FunctionInfo(apply_tag, bound=None)
+ |
+ |  apply_tag_by_name = gi.FunctionInfo(apply_tag_by_name, bound=None)
+ |
+ |  backspace = gi.FunctionInfo(backspace, bound=None)
+ |
+ |  begin_user_action = gi.FunctionInfo(begin_user_action, bound=None)
+ |
+ |  copy_clipboard = gi.FunctionInfo(copy_clipboard, bound=None)
+ |
+ |  create_child_anchor = gi.FunctionInfo(create_child_anchor, bound=None)
+ |
+ |  cut_clipboard = gi.FunctionInfo(cut_clipboard, bound=None)
+ |
+ |  delete = gi.FunctionInfo(delete, bound=None)
+ |
+ |  delete_interactive = gi.FunctionInfo(delete_interactive, bound=None)
+ |
+ |  delete_mark = gi.FunctionInfo(delete_mark, bound=None)
+ |
+ |  delete_mark_by_name = gi.FunctionInfo(delete_mark_by_name, bound=None)
+ |
+ |  delete_selection = gi.FunctionInfo(delete_selection, bound=None)
+ |
+ |  deserialize = gi.FunctionInfo(deserialize, bound=None)
+ |
+ |  deserialize_get_can_create_tags = gi.FunctionInfo(deserialize_get_can_...
+ |
+ |  deserialize_set_can_create_tags = gi.FunctionInfo(deserialize_set_can_...
+ |
+ |  end_user_action = gi.FunctionInfo(end_user_action, bound=None)
+ |
+ |  get_bounds = gi.FunctionInfo(get_bounds, bound=None)
+ |
+ |  get_char_count = gi.FunctionInfo(get_char_count, bound=None)
+ |
+ |  get_copy_target_list = gi.FunctionInfo(get_copy_target_list, bound=Non...
+ |
+ |  get_deserialize_formats = gi.FunctionInfo(get_deserialize_formats, bou...
+ |
+ |  get_end_iter = gi.FunctionInfo(get_end_iter, bound=None)
+ |
+ |  get_has_selection = gi.FunctionInfo(get_has_selection, bound=None)
+ |
+ |  get_insert = gi.FunctionInfo(get_insert, bound=None)
+ |
+ |  get_iter_at_child_anchor = gi.FunctionInfo(get_iter_at_child_anchor, b...
+ |
+ |  get_iter_at_line = gi.FunctionInfo(get_iter_at_line, bound=None)
+ |
+ |  get_iter_at_line_index = gi.FunctionInfo(get_iter_at_line_index, bound...
+ |
+ |  get_iter_at_line_offset = gi.FunctionInfo(get_iter_at_line_offset, bou...
+ |
+ |  get_iter_at_mark = gi.FunctionInfo(get_iter_at_mark, bound=None)
+ |
+ |  get_iter_at_offset = gi.FunctionInfo(get_iter_at_offset, bound=None)
+ |
+ |  get_line_count = gi.FunctionInfo(get_line_count, bound=None)
+ |
+ |  get_mark = gi.FunctionInfo(get_mark, bound=None)
+ |
+ |  get_modified = gi.FunctionInfo(get_modified, bound=None)
+|
+ |  get_paste_target_list = gi.FunctionInfo(get_paste_target_list, bound=N...
+ |
+ |  get_selection_bound = gi.FunctionInfo(get_selection_bound, bound=None)
+ |
+ |  get_serialize_formats = gi.FunctionInfo(get_serialize_formats, bound=N...
+ |
+ |  get_slice = gi.FunctionInfo(get_slice, bound=None)
+ |
+ |  get_start_iter = gi.FunctionInfo(get_start_iter, bound=None)
+ |
+ |  get_tag_table = gi.FunctionInfo(get_tag_table, bound=None)
+ |
+ |  get_text = gi.FunctionInfo(get_text, bound=None)
+ |
+ |  insert_child_anchor = gi.FunctionInfo(insert_child_anchor, bound=None)
+ |
+ |  insert_interactive = gi.FunctionInfo(insert_interactive, bound=None)
+ |
+ |  insert_interactive_at_cursor = gi.FunctionInfo(insert_interactive_at_c...
+ |
+ |  insert_markup = gi.FunctionInfo(insert_markup, bound=None)
+ |
+ |  insert_pixbuf = gi.FunctionInfo(insert_pixbuf, bound=None)
+ |
+ |  insert_range = gi.FunctionInfo(insert_range, bound=None)
+ |
+ |  insert_range_interactive = gi.FunctionInfo(insert_range_interactive, b...
+ |
+ |  move_mark = gi.FunctionInfo(move_mark, bound=None)
+ |
+ |  move_mark_by_name = gi.FunctionInfo(move_mark_by_name, bound=None)
+ |
+ |  paste_clipboard = gi.FunctionInfo(paste_clipboard, bound=None)
+ |
+ |  place_cursor = gi.FunctionInfo(place_cursor, bound=None)
+ |
+ |  register_deserialize_format = gi.FunctionInfo(register_deserialize_for...
+ |
+ |  register_deserialize_tagset = gi.FunctionInfo(register_deserialize_tag...
+ |
+ |  register_serialize_format = gi.FunctionInfo(register_serialize_format,...
+ |
+ |  register_serialize_tagset = gi.FunctionInfo(register_serialize_tagset,...
+ |
+ |  remove_all_tags = gi.FunctionInfo(remove_all_tags, bound=None)
+ |
+ |  remove_selection_clipboard = gi.FunctionInfo(remove_selection_clipboar...
+ |
+ |  remove_tag = gi.FunctionInfo(remove_tag, bound=None)
+ |
+ |  remove_tag_by_name = gi.FunctionInfo(remove_tag_by_name, bound=None)
+ |
+ |  select_range = gi.FunctionInfo(select_range, bound=None)
+ |
+ |  serialize = gi.FunctionInfo(serialize, bound=None)
+ |
+ |  set_modified = gi.FunctionInfo(set_modified, bound=None)
+ |
+ |  unregister_deserialize_format = gi.FunctionInfo(unregister_deserialize...
+ |
+ |  unregister_serialize_format = gi.FunctionInfo(unregister_serialize_for...
+ |
+ |  ----------------------------------------------------------------------
+|  Methods inherited from gi.overrides.GObject.Object:
+ |
+ |  __copy__(...) from gi._gi.GObject
+ |
+ |  __deepcopy__(...) from gi._gi.GObject
+ |
+ |  bind_property(...) from gi._gi.GObject
+ |
+ |  bind_property_full = _unsupported_method(self, *args, **kargs)
+ |
+ |  chain(...) from gi._gi.GObject
+ |
+ |  compat_control = _unsupported_method(self, *args, **kargs)
+ |
+ |  connect(...) from gi._gi.GObject
+ |
+ |  connect_after(...) from gi._gi.GObject
+ |
+ |  connect_data(self, detailed_signal, handler, *data, **kwargs)
+ |      Connect a callback to the given signal with optional user data.
+ |
+ |      :param str detailed_signal:
+ |          A detailed signal to connect to.
+ |      :param callable handler:
+ |          Callback handler to connect to the signal.
+ |      :param *data:
+ |          Variable data which is passed through to the signal handler.
+ |      :param GObject.ConnectFlags connect_flags:
+ |          Flags used for connection options.
+ |      :returns:
+ |          A signal id which can be used with disconnect.
+ |
+ |  connect_object(...) from gi._gi.GObject
+ |
+ |  connect_object_after(...) from gi._gi.GObject
+ |
+ |  disconnect = signal_handler_disconnect(*args, **kwargs) from gi.repository.GObject._signalmethod.<locals>
+ |      signal_handler_disconnect(instance:GObject.Object, handler_id:int)
+ |
+ |  disconnect_by_func(...) from gi._gi.GObject
+ |
+ |  emit(...) from gi._gi.GObject
+ |
+ |  emit_stop_by_name = stop_emission(self, detailed_signal)
+ |
+ |  force_floating = _unsupported_method(self, *args, **kargs)
+ |
+ |  freeze_notify(self)
+ |      Freezes the object's property-changed notification queue.
+ |
+ |      :returns:
+ |          A context manager which optionally can be used to
+ |          automatically thaw notifications.
+ |
+ |      This will freeze the object so that "notify" signals are blocked until
+ |      the thaw_notify() method is called.
+ |
+ |      .. code-block:: python
+ |
+ |          with obj.freeze_notify():
+ |              pass
+ |
+ |  get_data = _unsupported_data_method(self, *args, **kargs)
+ |
+ |  get_properties(...) from gi._gi.GObject
+ |
+ |  get_property(...) from gi._gi.GObject
+ |
+ |  get_qdata = _unsupported_data_method(self, *args, **kargs)
+ |
+|  handler_block = signal_handler_block(obj, handler_id) from gi.overrides.GObject
+ |      Blocks the signal handler from being invoked until
+ |      handler_unblock() is called.
+ |
+ |      :param GObject.Object obj:
+ |          Object instance to block handlers for.
+ |      :param int handler_id:
+ |          Id of signal to block.
+ |      :returns:
+ |          A context manager which optionally can be used to
+ |          automatically unblock the handler:
+ |
+ |      .. code-block:: python
+ |
+ |          with GObject.signal_handler_block(obj, id):
+ |              pass
+ |
+ |  handler_block_by_func(...) from gi._gi.GObject
+ |
+ |  handler_disconnect = signal_handler_disconnect(*args, **kwargs) from gi.repository.GObject._signalmethod.<locals>
+ |      signal_handler_disconnect(instance:GObject.Object, handler_id:int)
+ |
+ |  handler_is_connected = signal_handler_is_connected(*args, **kwargs) from gi.repository.GObject._signalmethod.<locals>
+ |      signal_handler_is_connected(instance:GObject.Object, handler_id:int) -> bool
+ |
+ |  handler_unblock = signal_handler_unblock(*args, **kwargs) from gi.repository.GObject._signalmethod.<locals>
+ |      signal_handler_unblock(instance:GObject.Object, handler_id:int)
+ |
+ |  handler_unblock_by_func(...) from gi._gi.GObject
+ |
+ |  interface_find_property = _unsupported_method(self, *args, **kargs)
+ |
+ |  interface_install_property = _unsupported_method(self, *args, **kargs)
+ |
+ |  interface_list_properties = _unsupported_method(self, *args, **kargs)
+ |
+ |  notify_by_pspec = _unsupported_method(self, *args, **kargs)
+ |
+ |  ref = _unsupported_method(self, *args, **kargs)
+ |
+ |  ref_sink = _unsupported_method(self, *args, **kargs)
+ |
+ |  replace_data = _unsupported_data_method(self, *args, **kargs)
+ |
+ |  replace_qdata = _unsupported_data_method(self, *args, **kargs)
+ |
+ |  set_data = _unsupported_data_method(self, *args, **kargs)
+ |
+ |  set_properties(...) from gi._gi.GObject
+ |
+ |  set_property(...) from gi._gi.GObject
+ |
+ |  steal_data = _unsupported_data_method(self, *args, **kargs)
+ |
+ |  steal_qdata = _unsupported_data_method(self, *args, **kargs)
+ |
+ |  stop_emission(self, detailed_signal)
+ |      Deprecated, please use stop_emission_by_name.
+ |
+ |  stop_emission_by_name = signal_stop_emission_by_name(*args, **kwargs) from gi.repository.GObject._signalmethod.<locals>
+ |      signal_stop_emission_by_name(instance:GObject.Object, detailed_signal:str)
+ |
+ |  unref = _unsupported_method(self, *args, **kargs)
+ |
+ |  watch_closure = _unsupported_method(self, *args, **kargs)
+ |
+ |  weak_ref(...) from gi._gi.GObject
+ |
+ |  ----------------------------------------------------------------------
+|  Data and other attributes inherited from gi.repository.GObject.Object:
+ |
+ |  getv = gi.FunctionInfo(getv, bound=None)
+ |
+ |  is_floating = gi.FunctionInfo(is_floating, bound=None)
+ |
+ |  newv = gi.FunctionInfo(newv, bound=<class 'gi.repository.Gedit.Documen...
+ |
+ |  notify = gi.FunctionInfo(notify, bound=None)
+ |
+ |  run_dispose = gi.FunctionInfo(run_dispose, bound=None)
+ |
+ |  thaw_notify = gi.FunctionInfo(thaw_notify, bound=None)
+ |
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from gi._gi.GObject:
+ |
+ |  __delattr__(self, name, /)
+ |      Implement delattr(self, name).
+ |
+ |  __eq__(self, value, /)
+ |      Return self==value.
+ |
+ |  __ge__(self, value, /)
+ |      Return self>=value.
+ |
+ |  __gt__(self, value, /)
+ |      Return self>value.
+ |
+ |  __hash__(self, /)
+ |      Return hash(self).
+ |
+ |  __init__(self, /, *args, **kwargs)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |
+ |  __le__(self, value, /)
+ |      Return self<=value.
+ |
+ |  __lt__(self, value, /)
+ |      Return self<value.
+ |
+ |  __ne__(self, value, /)
+ |      Return self!=value.
+ |
+ |  __repr__(self, /)
+ |      Return repr(self).
+ |
+ |  __setattr__(self, name, value, /)
+ |      Implement setattr(self, name, value).
+ |
+ |  ----------------------------------------------------------------------
+ |  Static methods inherited from gi._gi.GObject:
+ |
+ |  __new__(*args, **kwargs) class method of gi._gi.GObject
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |
+ |  ----------------------------------------------------------------------
+ |  Data descriptors inherited from gi._gi.GObject:
+ |
+ |  __dict__
+ |
+ |  __gpointer__
+ |
+ |  __grefcount__
+ |
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes inherited from gi._gi.GObject:
+ |
+ |  __gdoc__ = 'Object GeditDocument\n\nSignals from GeditDocument...natio...
+ |
+ |  props = <gi._gi.GProps object>

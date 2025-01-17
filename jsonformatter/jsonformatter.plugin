@@ -1,0 +1,9 @@
+[Plugin]
+Loader=python3
+Module=jsonformatter
+IAge=3
+Name=JSON Formatter
+Description=Verify, Format and Minify JSON.
+Authors=elnaril <elnaril@gmx.com>
+Copyright=Copyright © 2025 Elnaril
+Website=https://github.com/Elnaril/gedit-plugin-collection

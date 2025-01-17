@@ -1,0 +1,6 @@
+https://wiki.gnome.org/Apps/Gedit/PythonPluginHowTo
+https://theawless.github.io/How-to-write-plugins-for-gedit/
+https://python-gtk-3-tutorial.readthedocs.io/en/latest/
+https://developer.gnome.org/documentation/tutorials/menus.html
+https://gitlab.gnome.org/explore/groups
+https://handbook.gnome.org/index.html

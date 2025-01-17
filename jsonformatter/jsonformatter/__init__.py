@@ -1,0 +1,3 @@
+from .json_formatter_app_activatable import JsonFormatterAppActivatable
+from .json_formatter_window_activatable import JsonFormatterWindowActivatable
+from .json_formatter_view_activatable import JsonFormatterViewActivatable
