@@ -105,10 +105,11 @@ class PrettifierWindowActivatable(GObject.Object, Gedit.WindowActivatable):
                 result.append(" ")
                 continue
 
-            # No more than 1 space in a row
-            if c == " " and len(result) > 0 and result[-1] == " ":
+            # No more than 1 space in a row, no line starting with a space
+            if c == " " and len(result) > 0 and (result[-1] == " " or result[-1] == "\n"):
                 continue
 
+            # remove existing new lines
             if c == "\n":
                 continue
 
