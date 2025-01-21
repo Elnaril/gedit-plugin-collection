@@ -58,7 +58,9 @@ class PrettifierWindowActivatable(GObject.Object, Gedit.WindowActivatable):
         doc = self.window.get_active_document()
         if not doc:
             return
+        doc.begin_user_action()
         doc.set_text(text)
+        doc.end_user_action()
 
     def on_prettify(self, action, data):
         text = self.get_current_text()
