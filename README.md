@@ -4,7 +4,7 @@ Collection of Gedit plugins:
 2. [Prettifier](#Prettifier): Prettify data structures
 
 ## Installation
-1. Get the file `plugins.zip` from the latest [release](https://github.com/Elnaril/gedit-plugin-collection/releases)
+1. Get the file `gedit-plugin-collection-x.y.z.tar.gz` from the latest [release](https://github.com/Elnaril/gedit-plugin-collection/releases)
 2. Extract its content into the folder `~/.local/share/gedit/plugins`
 
 So you should have something similar to:
