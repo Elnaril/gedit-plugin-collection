@@ -3,6 +3,20 @@ Collection of Gedit plugins:
 1. [JSON Formatter](#JSON-Formatter): Verify, Format and Minimify json documents
 2. [Prettifier](#Prettifier): Prettify data structures
 
+---
+
+<div>
+    <img 
+        style="display: block; 
+               margin-left: auto;
+               margin-right: auto;
+               width: 75%;"
+        src="./media/gedit-plugin-collection.jpg" 
+        alt="Gedit plugin collection">
+</div>
+
+---
+
 ## Installation
 1. Get the file `gedit-plugin-collection-x.y.z.tar.gz` from the latest [release](https://github.com/Elnaril/gedit-plugin-collection/releases)
 2. Extract its content into the folder `~/.local/share/gedit/plugins`
