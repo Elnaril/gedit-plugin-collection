@@ -19,9 +19,9 @@ class JsonFormatterWindowActivatable(GObject.Object, Gedit.WindowActivatable):
         action_format.connect("activate", self.on_format)
         self.window.add_action(action_format)
 
-        action_minimify = Gio.SimpleAction.new("minimify_json", None)
-        action_minimify.connect("activate", self.on_minimify)
-        self.window.add_action(action_minimify)
+        action_minify = Gio.SimpleAction.new("minify_json", None)
+        action_minify.connect("activate", self.on_minify)
+        self.window.add_action(action_minify)
 
         self.statusbar = self.window.get_statusbar()
         self.statusbar_context_id = self.statusbar.get_context_id("JSON Verify Result")
@@ -70,7 +70,7 @@ class JsonFormatterWindowActivatable(GObject.Object, Gedit.WindowActivatable):
         except json.decoder.JSONDecodeError:
             self.statusbar.push(self.statusbar_context_id, "⚠️ Invalid JSON format!")
 
-    def on_minimify(self, action, data):
+    def on_minify(self, action, data):
         try:
             json_doc = json.loads(self.get_current_text())
             self.set_new_text(json.dumps(json_doc))

@@ -22,13 +22,13 @@ class JsonFormatterAppActivatable(GObject.Object, Gedit.AppActivatable):
         menu.append_item(sub_menu_item_verify)
         sub_menu_item_format = Gio.MenuItem.new("Format", 'win.format_json')
         menu.append_item(sub_menu_item_format)
-        sub_menu_item_minimify = Gio.MenuItem.new("Minimify", 'win.minimify_json')
-        menu.append_item(sub_menu_item_minimify)
+        sub_menu_item_minify = Gio.MenuItem.new("Minify", 'win.minify_json')
+        menu.append_item(sub_menu_item_minify)
         self.menu_ext.append_menu_item(sub_menu)
 
         self.app.set_accels_for_action("win.verify_json", ("<Primary><Alt>v", None))
         self.app.set_accels_for_action("win.format_json", ("<Primary><Alt><Shift>j", None))
-        self.app.set_accels_for_action("win.minimify_json", ("<Primary><Alt>j", None))
+        self.app.set_accels_for_action("win.minify_json", ("<Primary><Alt>j", None))
 
 
     def _remove_menu(self):

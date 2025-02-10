@@ -1,6 +1,6 @@
 # Gedit Plugins
 Collection of Gedit plugins:
-1. [JSON Formatter](#JSON-Formatter): Verify, Format and Minimify json documents
+1. [JSON Formatter](#JSON-Formatter): Verify, Format and Minify json documents
 2. [Prettifier](#Prettifier): Prettify data structures
 
 ---
@@ -38,7 +38,7 @@ So you should have something similar to:
 This plugin allows you to easily:
 - Verify (CTRL-ALT-v) a JSON document is a correctly formatted 
 - Format (CTRL-ALT-J) a JSON document
-- Minimify (CTRL-ALT-j) a JSON document
+- Minify (CTRL-ALT-j) a JSON document
 
 #### Format Example:
 ```json
@@ -56,7 +56,7 @@ This plugin allows you to easily:
     }
 ]
 ```
-#### Minimify Example:
+#### Minify Example:
 ```json
 [{"inputs": [{"internalType": "address", "name": "initialOwner", "type": "address"}], "stateMutability": "nonpayable", "type": "constructor"}]
 ```
